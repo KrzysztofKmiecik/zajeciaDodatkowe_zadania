@@ -20,16 +20,17 @@ public class Main {
             invitationList.add(zaproszenie);
         }
 
-        getNumberOfInvitedPeople(invitationList);
+        System.out.println(String.format("Lacznie zaproszono: %d osob", getNumberOfInvitedPeople(invitationList)));
+
     }
 
-    private static void getNumberOfInvitedPeople(List<Zaproszenie> invitationList) {
+    private static int getNumberOfInvitedPeople(List<Zaproszenie> invitationList) {
         int numberOfInvitedPeople = 0;
         for (Zaproszenie zaproszenie1 : invitationList) {
             numberOfInvitedPeople += zaproszenie1.getTypZaproszenia().getIleOsob();
         }
-        System.out.println(String.format("Lacznie zaproszono: %d osob", numberOfInvitedPeople));
-
-
+        return numberOfInvitedPeople;
     }
+
+
 }
