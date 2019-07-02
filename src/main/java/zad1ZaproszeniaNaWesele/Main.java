@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        List<Zaproszenie> invitationList = new ArrayList<Zaproszenie>();
+        List<Zaproszenie> invitationList = new ArrayList<>();
 
         Scanner input = new Scanner(System.in);
         System.out.println("Podaj ilosc zaproszen:");
