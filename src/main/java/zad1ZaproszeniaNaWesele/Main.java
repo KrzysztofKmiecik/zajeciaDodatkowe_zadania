@@ -1,5 +1,7 @@
 package zad1ZaproszeniaNaWesele;
 
+import myUtils.MyTerminal;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -11,7 +13,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         System.out.println("Podaj ilosc zaproszen:");
         int numbersOfInvitations = input.nextInt();
-
+        MyTerminal.PrintInfo("podaj gosci");
         for (int i = 0; i < numbersOfInvitations; i++) {
             Zaproszenie zaproszenie = new Zaproszenie();
             zaproszenie.setImie(input.next());
