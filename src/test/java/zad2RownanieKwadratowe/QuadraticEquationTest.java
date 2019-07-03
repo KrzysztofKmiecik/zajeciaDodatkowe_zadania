@@ -1,6 +1,5 @@
 package zad2RownanieKwadratowe;
 
-import junitparams.Parameters;
 import org.assertj.core.data.Offset;
 import org.junit.Assert;
 import org.junit.Before;
@@ -80,5 +79,26 @@ public class QuadraticEquationTest {
 //        assertThat(expected).isEqualTo(actual, Offset.strictOffset(0.1));
 //    }
 
+    @Test
+    public void getX1_a1b2c1_n1() {
+        final int a = 1;
+        final int b = 2;
+        final int c = 1;
+
+        QuadraticEquation equation = new QuadraticEquation(a, b, c);
+        double expected = -1;
+        double actual = equation.getX1();
+
+        assertThat(expected).isEqualTo(actual, Offset.strictOffset(0.1));
+    }
+
+    @Test(expected = NoSolutionForQuadricException.class)
+    public void getX2_a1b2c1_NoSolutionForQuadricException() {
+        final int a = 1;
+        final int b = 2;
+        final int c = 1;
+        QuadraticEquation equation = new QuadraticEquation(a, b, c);
+        equation.getX2();
+    }
 
 }
