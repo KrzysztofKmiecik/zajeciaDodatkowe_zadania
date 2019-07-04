@@ -20,11 +20,15 @@ public class MojaData {
             }
             case 'c': {
                 String[] sMonth = {"sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "paz", "lis", "gru"};
-                return new String(String.format("%d %s %d", this.day, sMonth[this.month-1], this.year));
+                return new String(String.format("%d %s %d", this.day, sMonth[this.month - 1], this.year));
             }
 
         }
         return new String("");
     }
 
+    public static boolean przestepny(int rok) {
+
+        return ((rok % 4 == 0) && (rok % 100 != 0)) || (rok % 400 == 0);
+    }
 }

@@ -17,4 +17,6 @@ public class MyTerminal {
         Scanner input = new Scanner(System.in);
         return input.nextLine();
     }
+
+
 }
