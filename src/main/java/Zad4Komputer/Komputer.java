@@ -8,9 +8,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Komputer {
-    protected int moc;
-    protected String producent;
-    protected TypProcesora procesora;
+    private int moc;
+    private String producent;
+    private TypProcesora procesora;
 
 
 }
