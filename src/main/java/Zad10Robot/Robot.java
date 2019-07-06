@@ -13,12 +13,17 @@ public class Robot {
 
     }
 
-    public void poruszRobotem(RuchRobota ruchRobota) throws NoEnoughBatteryPwerToMoveException {
-        if (this.poziomBaterii > ruchRobota.getKosztBateri()) {
-            this.poziomBaterii -= ruchRobota.getKosztBateri();
-            System.out.print(String.format("Robot wykonał ruch %s ktory wymagał %d%% energii\t", ruchRobota, ruchRobota.getKosztBateri()));
-        } else
-            throw new NoEnoughBatteryPwerToMoveException("Za mało energi aby wykonać ruch");
+    public void poruszRobotem(RuchRobota ruchRobota) throws NoEnoughBatteryPwerToMoveException, DeviceIsNotReadyException {
+
+        if (this.isWlaczony()) {
+            if (this.poziomBaterii > ruchRobota.getKosztBateri()) {
+                this.poziomBaterii -= ruchRobota.getKosztBateri();
+                System.out.print(String.format("Robot wykonał ruch %s ktory wymagał %d%% energii\t", ruchRobota, ruchRobota.getKosztBateri()));
+            } else
+                throw new NoEnoughBatteryPwerToMoveException("Za mało energi aby wykonać ruch");
+        } else {
+            throw new DeviceIsNotReadyException("Robot nie jest włączony");
+        }
     }
 
     public int getPoziomBaterii() {
