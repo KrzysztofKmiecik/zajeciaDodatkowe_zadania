@@ -21,7 +21,7 @@ public class Main {
 
     public static void robotStart(Robot robot, MovementsRobot ruchRobota) {
         try {
-            System.out.print(String.format("Poziom baterii przed %d%%\t ", robot.getBateryLevel()));
+            System.out.print(String.format("Batery level before %d%%\t ", robot.getBateryLevel()));
             robot.moveRobot(ruchRobota);
 
         } catch (DeviceIsNotReadyException e) {
@@ -29,37 +29,37 @@ public class Main {
         } catch (NoEnoughBatteryPwerToMoveException e) {
             e.printStackTrace();
         }
-            System.out.println(String.format("Poziom baterii po %d%%", robot.getBateryLevel()));
+            System.out.println(String.format("Baterry level after  %d%%", robot.getBateryLevel()));
         }
     }
 
     /*OUTPUT
-    Poziom baterii przed 100%	 Robot made  STEP_LEFT which cost 10% energy	Poziom baterii po 90%
-Poziom baterii przed 90%	 Robot made  MOVE_HAND_LEFT which cost 5% energy	Poziom baterii po 85%
-Poziom baterii przed 85%	 Robot made  STEP_RIGHT which cost 10% energy	Poziom baterii po 75%
-Poziom baterii przed 75%	 Ex10Robot.DeviceIsNotReadyException: Robot was not enabled
-	at Ex10Robot.Robot.moveRobot(Robot.java:25)
-	at Ex10Robot.Main.robotStart(Main.java:25)Poziom baterii po 75%
-Poziom baterii przed 75%	 Poziom baterii po 75%
-Poziom baterii przed 75%	 Robot made  JUMP which cost 20% energy	Poziom baterii po 55%
-Poziom baterii przed 55%	 Robot made  JUMP which cost 20% energy	Poziom baterii po 35%
-Poziom baterii przed 35%
-	at Ex10Robot.Main.main(Main.java:11)
-Robot made  JUMP which cost 20% energy	Ex10Robot.DeviceIsNotReadyException: Robot was not enabled
+Batery level before 100%	 Robot made  STEP_LEFT which cost 10% energy	Baterry level after  90%
+Batery level before 90%	 Robot made  MOVE_HAND_LEFT which cost 5% energy	Baterry level after  85%
+Batery level before 85%	 Robot made  STEP_RIGHT which cost 10% energy	Baterry level after  75%
+Batery level before 75%	 Ex10Robot.DeviceIsNotReadyException: Robot was not enabled
 	at Ex10Robot.Robot.moveRobot(Robot.java:25)
 	at Ex10Robot.Main.robotStart(Main.java:25)
-	at Ex10Robot.Main.main(Main.java:12)
-Poziom baterii po 15%
-Poziom baterii przed 15%	 Ex10Robot.NoEnoughBatteryPwerToMoveException: Batery lavel is too low
+	at Ex10Robot.Main.main(Main.java:11)
+Ex10Robot.DeviceIsNotReadyException: Robot was not enabled
+	at Ex10Robot.Robot.moveRobot(Robot.java:25)
+	at Ex10Robot.Main.robotStart(Main.java:25)
+Baterry level after  75%
+	at Ex10Robot.Main.main(Main.java:12)Batery level before 75%
+Baterry level after  75%
+Batery level before 75%	 Robot made  JUMP which cost 20% energy	Ex10Robot.NoEnoughBatteryPwerToMoveException: Batery lavel is too low
 	at Ex10Robot.Robot.moveRobot(Robot.java:23)
 	at Ex10Robot.Main.robotStart(Main.java:25)
 	at Ex10Robot.Main.main(Main.java:17)
-Poziom baterii po 15%
-Poziom baterii przed 15%	 Ex10Robot.NoEnoughBatteryPwerToMoveException: Batery lavel is too low
+Baterry level after  55%
+Batery level before 55%	 Robot made  JUMP which cost 20% energy	Baterry level after  35%
+Batery level before 35%	 Robot made  JUMP which cost 20% energy	Baterry level after  15%
+Batery level before 15%	 Baterry level after  15%
+Batery level before 15%	 Ex10Robot.NoEnoughBatteryPwerToMoveException: Batery lavel is too low
 	at Ex10Robot.Robot.moveRobot(Robot.java:23)
 	at Ex10Robot.Main.robotStart(Main.java:25)
 	at Ex10Robot.Main.main(Main.java:18)
-Poziom baterii po 15%
+Baterry level after  15%
 
 Process finished with exit code 0
 
