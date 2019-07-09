@@ -48,7 +48,7 @@ public class Main {
                     break;
                 }
                 case "multiply": {
-                    calculator.multiplay(Double.valueOf(sValue));
+                    calculator.multiply(Double.valueOf(sValue));
                     myFileNIO.writeToFile(strToWrite);
                     break;
                 }

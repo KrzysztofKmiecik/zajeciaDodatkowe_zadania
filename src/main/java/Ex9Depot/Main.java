@@ -10,18 +10,18 @@ public class Main {
         Tram tramwaj2 = new Tram(22, 20, TramWagons.two);
         Tram tramwaj3 = new Tram(33, 30, TramWagons.three);
 
-        DepotBus zajezdniaAutobusowa = new DepotBus("GdyniaObłuże");
-        zajezdniaAutobusowa.addVehicle(autobus1);
-        zajezdniaAutobusowa.addVehicle(autobus2);
-        zajezdniaAutobusowa.addVehicle(autobus3);
+        DepotBus depotBus = new DepotBus("GdyniaObłuże");
+        depotBus.addVehicle(autobus1);
+        depotBus.addVehicle(autobus2);
+        depotBus.addVehicle(autobus3);
 
-        DepotTram zajezdniaTramwajowa = new DepotTram("GdyniaChylonia");
-        zajezdniaTramwajowa.addVehicle(tramwaj1);
-        zajezdniaTramwajowa.addVehicle(tramwaj2);
-        zajezdniaTramwajowa.addVehicle(tramwaj3);
+        DepotTram depotTram = new DepotTram("GdyniaChylonia");
+        depotTram.addVehicle(tramwaj1);
+        depotTram.addVehicle(tramwaj2);
+        depotTram.addVehicle(tramwaj3);
 
-        zajezdniaAutobusowa.getDescription();
-        zajezdniaTramwajowa.getDescription();
+        depotBus.getDescription();
+        depotTram.getDescription();
     }
 }
 /*OUTPUT

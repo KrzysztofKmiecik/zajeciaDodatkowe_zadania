@@ -6,11 +6,11 @@ public class Main {
         final int b = -4;//2
         final int c = 3;
 
-        QuadraticEquation rownanie = new QuadraticEquation(a, b, c);
+        QuadraticEquation equation = new QuadraticEquation(a, b, c);
 
         try {
             System.out.println(String.format("Solution of the quadratic equation with factors   a=%d,b=%d,c=%d is\nX1:%.2f \nX2:%.2f ",
-                    a, b, c, rownanie.getX1(), rownanie.getX2()));
+                    a, b, c, equation.getX1(), equation.getX2()));
         } catch (NoSolutionForQuadraticException e) {
             e.printStackTrace();
         }

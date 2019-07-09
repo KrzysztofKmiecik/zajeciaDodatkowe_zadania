@@ -32,7 +32,7 @@ public class CalculatorTest {
         calculator.clear();
         calculator.add(2);
         double expected = 6;
-        calculator.multiplay(3);
+        calculator.multiply(3);
         double actual = calculator.getVariable();
         assertThat(expected).isEqualTo(actual, Offset.strictOffset(0.1));
 

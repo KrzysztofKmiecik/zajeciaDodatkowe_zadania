@@ -17,7 +17,7 @@ public class Calculator {
         this.variable -= variable;
     }
 
-    public void multiplay(double variable) {
+    public void multiply(double variable) {
         this.variable *= variable;
     }
 
